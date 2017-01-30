@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no">
+		<meta name="author" content="Denisse Villamar">
+		<title>Manejo de Formulario</title>
+	</head>
+	<body>
+		<h1>Registro en nuestra tienda</h1>
+		<!--form sirve para crear un formulario en la página web/-->
+		<!-- el atributo name permite nombrar el formulario para referenciar en el caso de varios formularios/-->
+		<!-- autocomplete permite autocompletar campos de un formulario/-->
+		<form name="formContacto" autocomplete="on">
+			<!-- Permite crear un marco con etiqueta/-->
+			<fieldset>
+				<!-- legend permite colocar el titulo de la etiqueta en el marco/-->
+				<legend>Lección 3: Etiquetas de Formulario</legend>
+				<p>
+					<label for="Nombre">Nombre de Usuario: </label></br>
+					<input type="text" id="Nombre" placeholder="Ej: Denisse" autofocus required>
+					</br>
+				</p>
+				<p>
+					<label for="email">Email: </label>
+					<input type="email" id="email" placeholder="Ej: de2791vi@gmail.com" required>
+					</br>
+				</p>
+				<p>
+					<label for="edad">Edad: </label>
+					<input type="number" id="edad" placeholder="25" required>
+					</br>
+				</p>
+				<p>
+					<label for="fechaNacimiento">Fecha de Nacimiento: </label>
+					<input type="date" id="fechaNacimiento">
+					</br>
+				</p>
+				<p>
+					<label for="Genero">Género: </label>
+					<input type="radio" name="GeneroMasc" id="Genero"><b>Masculino</b>
+					<input type="radio" name="GeneroFem" id="Genero"><b>Femenino</b>
+					</br>
+				</p>
+				<p>
+					<label for="ocupacion">Recomendado por: </label></br>
+					<!--select permite crear una lista de selección/-->
+					<select>
+						<option>Selecciona una opcion.. </option>
+						<option>Google</option>
+						<option>Amigo</option>
+						<option>Redes Sociales</option>
+					</select>
+					</br>
+				</p>
+				<p>
+					<label for="coment">Comentarios: </label></br>
+					<!--Permite crear una caja de texto con de varias líneas o área de texto/-->
+					<textarea name="areatext" rows="8" cols="40"></textarea>
+					</br>
+				</p>
+				<p>
+					<label for="acepterm">Acepto Términos y Condiciones: </label>
+					<input type="checkbox" id="acepterm" name="acepterm">
+					</br>
+				</p>
+				<input type="submit" value="Enviar">
+				<input type="reset" value="Limpiar Formulario">
+			</fieldset>
+		</form>
+	</body>
+</html>
