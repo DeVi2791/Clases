@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no">
+		<meta name="author" content="Denisse Villamar">
+		<title>Etiqueta SVG e image</title>
+		<!--description>incrustar paginas externas dentro de una propia</description/-->
+	</head>
+	<body>
+		<h1>Manejo de etiqueta svg</h1>
+		<h2>SVG con imagen descargada</h2>
+		<!--Atributos svg
+			style. 
+			viewbox. crea un subespacio de trabajo dentro del cual se generan los elementos de la misma etiqueta
+			g. agrupa figuras con las mismas características de estilo.
+			defs. define partes de codigo q se reutilizan en cualquier otra parte del espacio de trabajo. se utiliza por medio de fill.
+			title. Título
+			use. hace referencia al id del elemento que está dentro de defs.
+		/-->
+		<svg style="border: 2px solid black;" width="200px" height="200px" viewbox="0 0 200 200">
+			<!--image es propio de svg y no es lo mismo que img.
+			Atributos en image
+				xlink:href. guarda la ruta y el nombre de la imagen.
+				width y height. son necesarios en una imagen svg, caso contrario se toma por defecto 0 y 0.
+				x & y. son la posición de coordenadas en la pantalla.
+			/-->
+			<image xlink:href="image/tiger.svg" width="200px" height="200px"></image>
+		</svg>
+		<h2>Dibujando figuras básicas svg</h2>
+		<ol>
+			<li>Círculo</li></br>
+			<svg width="400" height="400">
+				<title>circulo svg</title>
+				<desc>Figura con etiquetas complementarias.</desc>
+				<defs>
+					<circle id="circ" r="40" fill="red" stroke="black" stroke-width="3"/>
+				</defs>				
+				<!--
+				cx y cy. posición 
+				fill. color de relleno
+				stroke. color de borde
+				/-->
+				<use cx="150" cy="250"  xlink:href="#circ" />
+			</svg>
+			<li>Rectángulo</li></br>
+			<svg width="450" height="150">
+				<defs>
+					<linearGradient id="Gradiente1">
+					<stop offset="20%" stop-color="#39F"/>
+					<stop offset="90%" stop-color="#F3F"/>
+				</defs>
+				<!--/-->
+				<rect width="300" height="100" fill="url(#Gradiente1)"  stroke="black" stroke-width="3"/>
+			</svg>
+			<li>Polígono</li></br>
+			<svg width="500" height="250">
+				<!--/-->
+				<polygon points="220,10 300,210 170,250 123,234" fill="pink" stroke="black" stroke-width="3"/>
+			</svg>
+			<li>Polyline</li></br>
+			<svg width="500" height="200">
+				<!--/-->
+				<polyline points="20,20 40,25 60,40 80,120 120,140 200,180" fill="lime" stroke="black" stroke-width="3"/>
+			</svg>
+			<li>Elipse</li></br>
+			<svg width="500" height="140">
+				<!--
+				cx y cx. posicionamiento
+				rx y rx. tamaño de x y y
+				/-->
+				<ellipse cx="200" cy="80" rx="100" ry="50" fill="yellow" stroke="purple" stroke-width="2"/>
+			</svg>
+			<li>Línea</li></br>
+			<svg height="500" width="210">
+				<!--/-->
+				<line x1="0" y1="0" x2="200" y2="200" stroke="green" stroke-width="2"/>
+			</svg>
+			<li>Etiqueta path</li></br>
+			<svg height="600" width="600" viewbox="0 0 600 600">
+				<!--
+					M=moveto
+					L=lineto
+					H=horizontal lineto
+					V= vertical lineto
+					C= curveto
+					S= smooth curveto
+					Q= quadratic Bézier curve
+					T= smooth quadratic Bézier curveto
+					A= elliptical Arc
+					Z= closepath
+				/-->
+				<path
+					d="M 100 100 L 300 100 L 200 200 z"
+					fill="lime" stroke="black" stroke-width="5">
+				</path>
+			</svg>
+			</br>
+			<svg height="1200px" width="1200px" viewbox="0 0 1200 1200">
+				<path id=LineaA" d="M 100 350 l 150 -300"
+					fill="none" stroke="red" stroke-width="3">
+				</path>
+				<path id=LineaAB" d="M 250 50 l 150 300"
+					fill="none" stroke="red" stroke-width="3">
+				</path>
+				<path d="M 175 200 l 150 0"
+					fill="none" stroke="black" stroke-width="3">
+				</path>
+				<path d="M 100 350 q 150 -300 300 0"
+					fill="none" stroke="black" stroke-width="5">
+				</path>
+			</svg>
+		</ol>
+		
+	</body>
+</html>
