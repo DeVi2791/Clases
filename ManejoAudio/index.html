@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no">
+		<meta name="author" content="Denisse Villamar">
+		<title>Manejo Audio</title>
+	</head>
+	<body>
+		<h1>AUDIO</h1>
+		<h2>Autoplay</h2>
+		<p>Reproduce el video inmediatamente se abre la web, sin necesidad de dar clic en el botón de reproducción</p>
+		<audio src="C:\Users\Public\Music\Sample Music\Kalimba.mp3" controls autoplay></audio>
+		<h2>Loop</h2>
+		<p>Este atributo se encarga automáticamente de reproducir el audio siempre que termine.</p>
+		<audio src="C:\Users\Public\Music\Sample Music\Kalimba.mp3" controls loop></audio>
+		<h2>Preload</h2>
+		<p>Este atributo tiene un comportamiento especial. Cuando estamos trabajando con archivos multimedia que son muy pesados.</p>
+			<ul>
+				<li>none: No almacenar nuestros archivos.</li>
+				<audio src="C:\Users\Public\Music\Sample Music\Kalimba.mp3" controls preload="none"></audio>
+				<li>auto: Almacena temporalmente el archivo multimedia</li>
+				<audio src="C:\Users\Public\Music\Sample Music\Kalimba.mp3" controls preload="auto"></audio>
+			</ul>
+		<h1>VIDEO</h1>
+		<p>Controls poster. Pone la ruta de una imagen en caso de que el navegador no pueda reproducir.</p>
+		<p>Width & Heigh. Ancho y Altura</p>
+		<video controls poster="C:\Users\Public\Pictures\Sample Pictures\Crisantemo.jpg">
+			<!-- La etiqueta source permite ayudar al navegador a identificar el formato/-->
+			<source src="C:\Users\Public\Videos\Sample Videos\Wildlife.wmv" type="video/vmw">
+		</video>
+	</body>
+</html>
