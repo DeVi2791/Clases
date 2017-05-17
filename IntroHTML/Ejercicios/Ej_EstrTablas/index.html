@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no">
+		<meta name="author" content="Denisse Villamar">
+		<title>Manejo de Tablas</title>
+	</head>
+	<body>
+		<h1>Cartelera de vuelos - Aeropuerto el mirador</h1>
+			<h2>Llegadas</h2>
+				<!--table implica la creación de una tabla/-->
+				<!--border es un atributo de table para indicar el grosor del borde de la tabla/-->
+				<table border="1", cellpadding="0", cellspacing="0">
+					<!--thead es la cabecera de la tabla/-->
+					<thead>
+						<!--tr implica la creación de un registro o fila en la tabla/-->
+						<tr>
+							<!--th implica resaltar el registro/-->
+							<th>Aerolinea</th>
+							<th>Nro. vuelo</th>
+							<th>Estatus</th>
+							<th>Hora Estimada</th>
+							<th>Puerta</th>
+						</tr>
+					</thead>
+					<!--tbody es el cuerpo de la tabla/-->
+					<tbody>
+						<tr>
+							<!--td implica un registro en la tabla común/-->
+							<td>AIRLAN</td>
+							<td>355</td>
+							<td>ATERRIZO</td>
+							<td>2:45 PM</td>
+							<td>3</td>
+						</tr>				
+						<tr>
+							<td>VIAJAR</td>
+							<td>556</td>
+							<td>RETARDADO</td>
+							<td>2:35 PM</td>
+							<td>6</td>
+						</tr>
+						<tr>
+							<td>AEROVUELO</td>
+							<td>1234</td>
+							<td>EN VUELO</td>
+							<td>3:45 PM</td>
+							<td>8</td>
+						</tr>
+					</tbody>
+				</table>
+			<h2>Salidas</h2>
+				<table border="1", cellpadding="0", cellspacing="0">
+					<thead>
+						<th>Aerolinea</th>
+						<th>Nro. vuelo</th>
+						<th>Estatus</th>
+						<th>Hora Estimada</th>
+						<th>Puerta</th>
+					</thead>
+					<tbody>
+						<td>AIRLAN</td>
+						<td>355</td>
+						<td>EMBARCADO</td>
+						<td>2:15 PM</td>
+						<td>1</td>
+					</tbody>
+				</table>
+	</body>
+</html>
