@@ -38,3 +38,28 @@ Se podrá referirse al mismo mediante el .
 {
   color: purple;
 }
+/*
+Selectores de Atributo. Forman parte de los selectores avanzados.
+Pueden hacer consultas a nivel de atributos.
+*/
+a[href^='#']
+{
+    color: red;
+}
+a[href='http://www.google.com']{}
+/**todas las imagenes que sean svg
+Si utilizas $ busca el atributo que finalice con __
+^ buscara al principio
+~ multiples valores separados por espacios
+1(pie) valor al principio o en todo el contenido pero seguido de un guion
+*/
+img[src$='.svg']
+{
+  border-radius: 50px;
+}
+img[src$='jpg'],img[src$='png']{
+  border: 1px solid black;
+  border-radius: 50px;
+}
+/*todas las etiquetas title con el valor description*/
+[title*="description"]
