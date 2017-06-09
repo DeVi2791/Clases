@@ -1,0 +1,40 @@
+body
+{
+  background-color: gray;
+}
+footer
+{
+  margin-top: 20px;
+}
+img
+{
+  border-radius: 10px;
+}
+/*
+Se puede aplicar estilos a etiquetas específicas mediante su id
+pudiendo referirse a ellos por su nombre utilizando el #.
+Esta forma es eficiente y efectiva puesto que se referirá solo a
+dicha etiqueta.
+*/
+#Contenedor
+{
+  font-size: 16px;
+  font-family: helvetica;
+}
+#Encabezado
+{
+  display: block;
+  margin: 0 auto;
+}
+/*
+El selector class se utiliza para aplicar el mismo estilo a múltiples elementos.
+Se podrá referirse al mismo mediante el .
+*/
+.itemIndice
+{
+    list-style-type: upper-roman;
+}
+.enlace
+{
+  color: purple;
+}

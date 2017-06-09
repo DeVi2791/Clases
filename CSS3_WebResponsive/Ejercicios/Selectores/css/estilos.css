@@ -1,0 +1,30 @@
+h1.titulo
+{
+  background-color: aliceblue;
+  text-align: center;
+  padding: 10px;
+}
+h2
+{
+  background-color: yellow;
+}
+body
+{
+  margin: 20px;
+  font-family: verdana;
+}
+footer
+{
+  border-top: solid 1px black;
+  text-align: center;
+  padding-top: 10px;
+}
+#menu_principal
+{
+  padding: 10px 0px;
+}
+.resaltado
+{
+  background-color: yellow;
+  color: black;
+}
