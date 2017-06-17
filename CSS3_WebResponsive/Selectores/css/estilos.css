@@ -63,3 +63,44 @@ img[src$='jpg'],img[src$='png']{
 }
 /*todas las etiquetas title con el valor description*/
 [title*="description"]
+/*SELECTORES AVANZADOS*/
+/*
+* no depende de ningun otro para funcionar
+*/
+*
+{
+    margin: 1vh 1vw;
+}
+/*
+h1+h2 sirve para referenciar un elemento con la condicion estricta
+que el segundo elemento este precedido del primer elemento.
+*/
+h1+h2
+{
+  text-decoration: underline;
+}
+/*
+Selector de Hermanos
+Seleccion todos los elementos que sean hijos de la etiqueta que
+se especifica. Todos los h2 que estén precedidos por h1.
+*/
+h2~article
+{
+  text-align: justify;
+}
+/*
+Selector de Hijos Directos
+Hace referencia a todos los hijos directos de la etiqueta o
+elemento
+*/
+article> p
+{
+  text-decoration:inherit;
+}
+/*
+Funciona igual al anterior excepto que no aplica al primer hijo directo
+*/
+ul li
+{
+    list-style: circle;
+}
