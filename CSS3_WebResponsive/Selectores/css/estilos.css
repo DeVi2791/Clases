@@ -104,3 +104,75 @@ ul li
 {
     list-style: circle;
 }
+/*
+PseudoClases
+*/
+/*
+:visited Es lo contrario de la pseudo-clase :link,
+hace referencia a elementos que tenen
+enlaces y ya fueron visitados alguna vez
+por el usuario.
+*/
+a[href^="http://"]:visited{
+  color: red;
+}
+/*
+:hover
+Se actva cuando pasamos el cursor del
+mouse por encima del elemento.
+*/
+a:hover{
+  color: green;
+}
+/*
+:first-child
+Hace referencia el primer hijo de un elemento.
+*/
+h2:first-child{
+  text-decoration: underline;
+}
+/*
+:focus
+Es usado solo en los elementos input, ya que
+se actva cuando ponemos el cursor del
+mouse en un cuadro de texto y vamos a
+escribir algo.
+*/
+input:focus{
+  width: 160px;
+  height: 140px;
+}
+/*
+PseudoElementos
+*/
+/*
+::first-leter
+Este pseudo-elemento es usado en
+textos, párrafos y ttulos y hace referencia
+a la primera letra del contenido de dicho
+elemento.
+*/
+p::first-letter{
+  text-transform: capitalize;
+}
+/*
+::first-line
+Este pseudo-elemento se parece a ::first-letter:
+selecciona toda la primera línea del contenido
+del texto.
+*/
+p::first-line{
+  font-size: 32px;
+}
+/*
+::selecton
+Este pseudo-elemento se actva cuando el
+usuario selecciona una porción de texto en
+un elemento, es decir, si tenemos un elemento
+<p> que contene un párrafo y el
+usuario selecciona una parte del párrafo, se
+actvará este pseudo-elemento.
+*/
+p::selection{
+  text-decoration-color: purple;
+}
