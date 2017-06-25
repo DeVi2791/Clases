@@ -1,0 +1,32 @@
+/*
+border: tamaño tipo color
+Tipo de Borde
+none: sin borde, el ancho es definido como 0. Es el valor por defecto.
+hidden: igual que 'none', excepto en el caso de conflictos de bordes, por ejemplo,
+  en elementos de tabla.
+dashed: serie de guiones.
+dotted: serie de puntos.
+double: dos líneas rectas continuas separadas un numero de píxeles definido
+  como border-width.
+groove: Efecto de hundimiento del borde.
+inset: efecto de hundimiento de una caja.
+outset: efecto inverso a inset, la caja parece salir, como en 3D.
+ridge: efecto inverso a groove, el borde parece salir, como en 3D.
+solid: línea única,recta y sólida.
+*/
+article[class^='caja']{
+  border: 5px solid black;
+  display: inline-block;
+  height: 220px;
+  width: 400px;
+  text-align: justify;
+  padding: 10px;
+}
+/*
+margin: superior derecha inferior izquierda
+margin: todosloslados
+margin: superior/inferior izquierda/derecha
+*/
+.caja1{
+  margin: 5px 20px 50px 20px;
+}
