@@ -1,0 +1,15 @@
+h1{
+  background-color: rgb(113, 159, 81);
+  height: 150px;
+  align-content: center;
+  width: 40px;
+  /*display: none; no se ve el display*/
+  opacity: 0;/*no afecta la estructura*/
+}
+h2{
+  background-color: rgb(153, 63, 244);
+  display: inline;
+}
+p{
+  display: inline;
+}

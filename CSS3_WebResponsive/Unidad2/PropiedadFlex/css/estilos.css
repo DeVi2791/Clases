@@ -1,0 +1,77 @@
+/*
+Flex
+Permite la distribucion de la caja de manera fluida y dinamica, los contenidos se ajustan a los cambios en la ventana.
+Permite generar el tipo de distribucion flexbox. Involucra dos tipos de diseño: padre(contenedor) e hijos (items).
+*/
+body {
+  font-size: 3em;
+  font-family: helvetica;
+}
+div [class*="bloque"]{
+  min-height: 200px;
+  flex: 1 2 40%;
+}
+/*
+Para los items:
+Order.- Determina que elimentos van primero que otros.
+Flex-grow .- Determinan como crecerà un elemento para llenar el espacio. Admite numeros enteros.
+Flex-shrink .- Determinan como se encogerá un elemento para llenar el espacio. Admite numeros enteros.
+Flex-bases.- Tamaño por defecto antes de su distribucion. unidades de medidas convencionales.
+Flex.- combinacion 1 flex grow 2 flex shrink 3 flex bases
+*/
+.bloque1 {
+  color: #ddd;
+  background-color: #FF0000;
+  order: 2;
+
+
+}
+.bloque2 {
+  color: #333;
+  background-color: #00FF99;
+  order: 3;
+
+
+}
+.bloque3 {
+  color: #333;
+  background-color: #00FFFF;
+  order: 4;
+
+
+}
+.bloque4 {
+  color: #333;
+  background-color: #FFFF00;
+  order: 5;
+
+
+}
+.bloque5 {
+  color: #ddd;
+  background-color: #000000;
+  order: 1;
+
+}
+.bloque6 {
+  color: #333;
+  background-color: #0Fd000;
+  order: 6;
+
+}
+.bloque7 {
+  color: #ddd;
+  background-color: #0000F0;
+  order: 7;
+
+}
+/*
+Primero se debe declar el 'display' con flex {display: flex;}
+Flexbox ubica el contenido uno despues del otro. El sentido lo da la propiedad flex-direction (column, column-reverse, row, row-reverse)
+la propiedad 'flex-wrap' determina si los elementos se agrupan a una lìnea o se van a la siguiente una vez ocupado todo el tamaño de la pantalla (no wrap-unalinea-, wrap -variaslineas-, wrap-reverse -invertirelsentido-)
+Para definir las dos propiedades usar 'flex-flow: direccion tipoAgrupamiento'
+*/
+.contenedor{
+  display: flex;
+  flex-flow: row wrap;
+}
