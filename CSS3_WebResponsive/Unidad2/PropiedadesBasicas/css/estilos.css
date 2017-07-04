@@ -1,0 +1,24 @@
+/*
+text-align -> alinear el texto.
+text-indent -> margen a la izquierda
+text-transform -> uppercase(mayuscula), lowercase (minuscula),
+          capitalize (primera letra en mayuscula)
+letter-spacing -> espacio entre letras, medida en pixeles.
+*/
+p{
+  text-align: justify;
+  text-indent: 2em;
+  text-transform: capitalize;
+  letter-spacing: 5px;
+}
+/*
+text-decoration -> underline (subrayado), overline (linea sobre el texto),
+        line-through (tachado)
+word-spacing -> espacio entre palabras
+color -> color de fuente
+*/
+h1{
+  text-decoration: line-through;
+  word-spacing: 30px;
+  color: orange;
+}
