@@ -1,11 +1,11 @@
 body {
+		color: #000305;
 		font-size: 87.5%;
 		font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 		line-height: 1.429;
 		margin: 0;
 		padding: 0;
 		text-align: left;
-		color: #000305; /*new color de texto*/
 	}
 
 /* Encabezados */
@@ -25,9 +25,9 @@ h2, h3, h4, h5, h6 {
 a {outline: 0;}
 a img {border: 0px; text-decoration: none;}
 a:link, a:visited {
+	color: rgb(51, 153, 204);
 	padding: 0 1px;
 	text-decoration: underline;
-	color: rgb(51,153,204); /*new color de texto de los hipervinculos*/
 }
 
 /* Párrafos */
@@ -113,8 +113,7 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 
 	/* Nav Principal*/
 	#banner nav {
-		/*hsl representa el color entre matiz(0-360), saturacion e intensidad*/
-		background: hsl(0, 0%, 21%); /*new color negro de la barra de menu*/
+		background: hsl(0, 0%, 21%);
 		font-size: 1.143em;
 		height: 40px;
 		line-height: 30px;
@@ -122,48 +121,57 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 		padding: 0;
 		text-align: center;
 		width: 800px;
+		/*Efecto de esquinas redondas
+		Se puede usar con diferentes valores.
+			Un valor - Todas las esquinas con el mismo radio.
+			Dos valores - Primer valor, esquinas superior izquierda e inferior derecha.
+										Segundo valor, esquinas superior derecha e inferior izquierda.
+			Tres valores - Primer valor, esquina superior izquierda.
+										 Segundo valor, esquina superior derecha e inferior izquierda.
+										 Tercer valor, esquina inferior derecha.
+			Cuatro Valores - Primer valor, esquina superior izquierda.
+											 Segundo Valor, esquina superior derecha.
+											 Tercer Valor, esquina inferior izquierda.
+											 Cuarto Valor, esquina inferior derecha.
+		*/
+		border-radius: 5px; /*new - para chrome*/
+		-moz-border-radius:5px; /*new - para mozilla*/
+		-webkit-border-radius: 5px; /* new - para safari*/
 	}
 
 	#banner nav ul {list-style: none; margin: 0 auto; width: 800px;}
 	#banner nav li {float: left; display: inline; margin: 0;}
 
 	#banner nav a:link, #banner nav a:visited {
+		color: #fff;
 		display: inline-block;
 		height: 30px;
 		padding: 5px 1.5em;
 		text-decoration: none;
-		color: #fff; /*new*/
 	}
-	/*Barra de Links*/
 	#banner nav a:hover, #banner nav a:active{
-		/*Se recomienda la web hsl color picker para transformar los colores a transparencia*/
-		/*Propiedad que anade transparencia a los botones*/
-		background: hsla(200,60%,50%,0.65);/*new transparencia*/
+		border-radius: 15px 10px; /*new*/
+		background: hsla(200, 60%, 50%, 0.65);
 		text-shadow: none !important;
 	}
 	#banner nav .active a:link, #banner nav .active a:visited {
+		border-radius: 15px 10px 6px; /*new*/
+		background: #3399CC;
 		text-shadow: none !important;
-		background: #3399CC; /*new color de fondo de la barra de menu*/
-		color: #fff; /*new color de texto de la barra de menu*/
 	}
 
 /*
 	Contenido Relacionado con el contenido principal
 *****************/
 #featured {
-	/*Imagenes de Fondo. Se anade left top repeat para que cubra todo el recuadro
-	Se pueden realizar apilamientos separando los url con orden de apilamiento. La
-	imagen mas a la izquierda aparecera encima de las de la derecha*/
-	background: url(../img/css3_html5-badges.png) right top no-repeat,
+	background: url(../img/css3_html5_badges.png) right top no-repeat,
 							url(../img/papel_doblado.jpg) left top repeat;
-	/*Tamano en orden de las imagenes*/
-	background-size: 150px,300px;
-
+	background-size: 150px, 300px;
 	margin-bottom: 2em;
 	overflow: hidden;
 	padding: 20px;
 	width: 760px;
-
+	border-radius: 50px 30px 15px 5px;/*new*/
 }
 
 #featured h2 {font-size: 1.714em; margin-bottom: 0.333em;}
@@ -182,10 +190,16 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 	width: 760px;
 }
 
+#content .hentry{
+	/*Existen dos tipos de degradados*/
+	/*Degradado Lineal, se pueden pasar desde dos colores en adelante*/
+	background: linear-gradient(#fff,#67B8DE,#CDDEFF); /*new*/
+}
+
 /*
 	Sección Extras
 *****************/
-#extras {margin: 0 auto 3em auto; overflow: hidden;}
+#extras {margin: 0 auto 3em auto; /*overflow: hidden;***se comenta para permitir ver la sombra***/}
 
 #extras ul {list-style: none; margin: 0;}
 #extras li {}
@@ -206,14 +220,30 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 
 	/* Blogroll */
 	#extras .blogroll {
+		/*Degradado Radial*/
+		background: radial-gradient(#FFF,#3399CC,#FFF);/*new*/
 		float: left;
 		width: 615px;
 	}
 
 	#extras .blogroll li {float: left; margin: 0 20px 0 0; width: 185px;}
 
+	/*Enlaces de Blogroll*/
+	#extras .blogroll a:link, #extras .blogroll a:visited{
+			color: #363636;
+	}
+
 	/* Redes Sociales */
 	#extras .social {
+		/*Sombra a Recuadros, con la propiedad box-shadow:
+				h-shadow: Posición horizontal de la sombra
+				v-shadow: Posición vertical de la sombra
+				blur: distancia del desenfoque
+				spread: tamaño de la sombra
+				color: color de la sombra
+		*/
+		box-shadow: 30px 30px;/*new- Sombra en Recuadro Social*/
+
 		float: right;
 		width: 175px;
 	}
@@ -230,7 +260,11 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 	width: 760px;
 }
 
-#about .primary {float: left; width: 165px;}
+#about .primary {
+	/*Sombra en Recuadro Revista CSS3*/
+	box-shadow: 3px 5px 10px 0 rgba(0,0,0.2); /*new*/
+	float: left; width: 165px;
+}
 #about .primary strong {display: block; font-size: 1.286em;}
 #about .photo {float: left; margin: 5px 20px;}
 
@@ -273,19 +307,3 @@ li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
 		top: 1.5em;
 		width: 190px;
 	}
-
-#destacados{
-	text-shadow: 0 0 3px white;
-}
-
-#contenedor{
-	box-shadow: 4px 8px;
-}
-
-#disponible.contenedor{
-	box-shadow: 4px 8px #D46A6A;
-}
-
-#ofertas > h1{
-	text-shadow: 1px 1px 2px white, 0 0 30px #D46A6A;
-}

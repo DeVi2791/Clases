@@ -1,0 +1,40 @@
+table{
+  /*Para evitar la repetición del lineado y se visualiza como cajones
+    se utiliza la propiedad border-collapse con el atributo collapse*/
+  border-collapse: collapse;
+  /*Al asignar un valor de porcentaje a width, este se acomoda a toda la página*/
+  width: 50%;
+}
+table, td, th{
+  border: 1px solid black; /*borde a cada celda*/
+}
+
+td,th{
+  /*Controla ancho y alto de las celdas*/
+  width: 100px;
+  height: 30px;
+}
+
+/*Para alinear el texto horizontalmente, se utiliza la propiedad text-align
+  que puede tener los atributos center, left, justify, right, inherit.
+
+  Para alinear el texto verticalmente, se utiliza la propiedad vertical-align
+  que puede tener los atributos baseline, bottom, middle, sub, super, text-bottom,
+  text-top, top, inherit.
+*/
+th{
+  text-align: right;
+  vertical-align: top;
+}
+
+td{
+  text-align: left;
+  vertical-align: bottom;
+}
+
+/*Para cambiar colores en las franjas alternas, se usa el selector nth-child.
+  Puede recibir 'even', para filas pares y 'odd' para filas impares.
+*/
+tr:nth-child(odd){
+  background-color: #D1D1D1; 
+}
