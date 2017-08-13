@@ -1,0 +1,5 @@
+video{
+  width: 50%;
+  /*evita que el video exceda el tamaño del browser*/
+  max-width: 100%;
+}

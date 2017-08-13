@@ -1,0 +1,19 @@
+El viewport se configura dentro de la etiqueta a través de un elemento .
+Entre los valores de configuración que podemos especificarle se encuentran:
+
+* Nivel de escalado que puede realizar el usuario.
+* El zoom inicial que debe realizar el navegador.
+* El área disponible para renderizar.
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0>
+  width=device-width: Área disponible para renderizar, en este caso todo el ancho que tenga el viewport del dispositivo.
+  user-scalable=no: El usuario no puede hacer escala.
+  initial-scale=1.0: Nivel de zoom/escala Inicial.
+
+  Tiene diferentes formas de configuración, dentro de content:
+    + width .- Anchura Virtual Emulada de la pantalla. Por defecto debería ser
+      device-width.
+    + height .- Altura del dispositivo
+    + initial-scale .- Nivel de zoom inicial.
+    + maximum-scale .- Escala máxima del documento
+    + minimum-scale .- Escala mínimo
+    + user-scalable .- Si se permite o no hacer el zoom
